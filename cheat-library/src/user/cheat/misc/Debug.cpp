@@ -29,6 +29,7 @@ namespace cheat::feature
     {
         events::GameUpdateEvent += FUNCTION_HANDLER(OnGameUpdate);
         HookManager::install(app::MoleMole_ActorAbilityPlugin_OnEvent, ActorAbilityPlugin_OnEvent_Hook);
+        //HookManager::install(app::CommonMiscs_GetAssetPathHash_1, CommonMiscs_GetAssetPathHash_1_Hook);
         // HookManager::install(app::MoleMole_LuaShellManager_ReportLuaShellResult, LuaShellManager_ReportLuaShellResult_Hook);
         // HookManager::install(app::MoleMole_LuaShellManager_DoString, LuaShellManager_DoString_Hook);
         // HookManager::install(app::LuaEnv_DoString, LuaEnv_DoString_Hook);
@@ -48,6 +49,17 @@ namespace cheat::feature
     {
         static Debug instance;
         return instance;
+    }
+
+    static uint64_t CommonMiscs_GetAssetPathHash_1_Hook(app::String* path, app::String* extention, MethodInfo* method)
+    {
+        auto m_path = il2cppi_to_string(path);
+        auto m_extension = il2cppi_to_string(extention);
+        auto value = CALL_ORIGIN(CommonMiscs_GetAssetPathHash_1_Hook, path, extention, method);
+        if (m_extension == ".MiHoYoBinData") {
+            LOG_DEBUG("path: %s, hash: %x", m_path.c_str(), value);
+        }
+        return value;
     }
 
 
