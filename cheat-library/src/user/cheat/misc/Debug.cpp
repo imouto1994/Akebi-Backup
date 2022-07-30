@@ -21,6 +21,7 @@ namespace cheat::feature
 {
 
     static bool ActorAbilityPlugin_OnEvent_Hook(void* __this, app::BaseEvent* e, MethodInfo* method);
+    static uint64_t CommonMiscs_GetAssetPathHash_1_Hook(app::String* path, app::String* extention, MethodInfo* method);
     void OnGameUpdate();
     static bool csvFriendly = true;
     static bool includeHeaders = true;
@@ -29,7 +30,7 @@ namespace cheat::feature
     {
         events::GameUpdateEvent += FUNCTION_HANDLER(OnGameUpdate);
         HookManager::install(app::MoleMole_ActorAbilityPlugin_OnEvent, ActorAbilityPlugin_OnEvent_Hook);
-        //HookManager::install(app::CommonMiscs_GetAssetPathHash_1, CommonMiscs_GetAssetPathHash_1_Hook);
+        HookManager::install(app::CommonMiscs_GetAssetPathHash_1, CommonMiscs_GetAssetPathHash_1_Hook);
         // HookManager::install(app::MoleMole_LuaShellManager_ReportLuaShellResult, LuaShellManager_ReportLuaShellResult_Hook);
         // HookManager::install(app::MoleMole_LuaShellManager_DoString, LuaShellManager_DoString_Hook);
         // HookManager::install(app::LuaEnv_DoString, LuaEnv_DoString_Hook);
