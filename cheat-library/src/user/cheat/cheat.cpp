@@ -12,6 +12,7 @@
 #include <cheat/misc/Debug.h>
 #include <cheat/misc/sniffer/PacketSniffer.h>
 #include <cheat/misc/WindSeedBypass.h>
+#include <cheat/misc/AssetDump.h>
 
 #include <cheat/player/GodMode.h>
 #include <cheat/player/InfiniteStamina.h>
@@ -79,6 +80,7 @@ namespace cheat
 			FEAT_INST(Debug),
 			FEAT_INST(PacketSniffer),
 			FEAT_INST(WindSeedBypass),
+			FEAT_INST(AssetDump),
 
 			FEAT_INST(GodMode),
 			FEAT_INST(InfiniteStamina),

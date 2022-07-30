@@ -15,6 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\user\cheat\misc\AssetDump.h" />
     <ClInclude Include="src\user\cheat\misc\sniffer\pipe\messages\PipeMessage.h" />
     <ClInclude Include="src\user\cheat\misc\sniffer\pipe\messages\PipeModifyData.h" />
     <ClInclude Include="src\user\cheat\misc\sniffer\pipe\messages\PipePacketData.h" />
@@ -107,6 +108,7 @@
     <Font Include="res\Ruda-ExtraBold.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\user\cheat\misc\AssetDump.cpp" />
     <ClCompile Include="src\user\cheat\misc\sniffer\pipe\messages\PipeMessage.cpp" />
     <ClCompile Include="src\user\cheat\misc\sniffer\pipe\messages\PipeModifyData.cpp" />
     <ClCompile Include="src\user\cheat\misc\sniffer\pipe\messages\PipePacketData.cpp" />
@@ -995,7 +997,7 @@
       </Command>
     </PostBuildEvent>
     <CustomBuildStep>
-      <Command>"$(OutDir)injector.exe" powershell -nop -c "&amp;amp; {sleep 20}"</Command>
+      <Command>"$(OutDir)injector.exe" powershell -nop -c "&amp;amp;amp; {sleep 20}"</Command>
       <Outputs>$(OutDir)_noexist.nope;%(Outputs)</Outputs>
       <Inputs>$(TargetPath);%(Inputs)</Inputs>
     </CustomBuildStep>
