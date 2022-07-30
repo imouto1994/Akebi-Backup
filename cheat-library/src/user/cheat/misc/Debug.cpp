@@ -50,7 +50,6 @@ namespace cheat::feature
         return instance;
     }
 
-
     // Raise when player start game log in (after press a door)
     // Contains information about player system and game integrity
     static void SendInfo_Hook(app::MoleMole_NetworkManager* __this, app::GKOJAICIOPA* info, MethodInfo* method)

@@ -12,6 +12,9 @@ DO_APP_FUNC(0x034A37B0, void, MoleMole_InLevelMapPageContext_OnMarkClicked, (InL
 DO_APP_FUNC(0x034BA870, void, MoleMole_InLevelMapPageContext_OnMapClicked, (InLevelMapPageContext* __this, Vector2 screenPos, MethodInfo* method));
 DO_APP_FUNC(0x017DB1C0, bool, MoleMole_MapModule_IsAreaUnlock, (MoleMole_MapModule* __this, uint32_t sceneID, uint32_t areaID, MethodInfo* method));
 
+// Game Asset
+DO_APP_FUNC(0x04822420, uint64_t, CommonMiscs_GetAssetPathHash_1, (String * path, String * extention, MethodInfo * method));
+DO_APP_FUNC(0x05C110E0, uint64_t, Application_MiHoYoGetAssetPathHash, (String* path, int32_t length, MethodInfo* method));
 
 // should be 'op_Implicit' not 'get_value' 'BIKAKJDICGJ_1'
 DO_APP_FUNC(0x02FCD9C0, uint16_t, MoleMole_SimpleSafeUInt16_get_Value, (SimpleSafeUInt16 v, MethodInfo* method));
