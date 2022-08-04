@@ -1,12 +1,12 @@
 {
-  "game_version": "2.8.52",
+  "game_version": "2.8.54",
   "modules": {
     "UnityPlayer.dll": {
-      "checksum": 12668396102287961617,
+      "checksum": 5597079954911884774,
       "timestamp": 0
     },
     "UserAssembly.dll": {
-      "checksum": 13302649444542036077,
+      "checksum": 14033331240063523700,
       "timestamp": 0
     }
   }
